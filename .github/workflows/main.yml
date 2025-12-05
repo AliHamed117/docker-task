@@ -22,7 +22,7 @@ jobs:
         run: docker login --username alihaamed17 --password ${{ secrets.DOCKER_PAT }}
       - name: Build and push image
         run: |
-          docker build -t alihaamed17/docker-task:latest .
-          docker push alihaamed17/docker-task:latest  
+          docker build -t alihaamed17/AliHamed .
+          docker push alihaamed17/AliHamed  
     
 
