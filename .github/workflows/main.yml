@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
 
-    steps:
-      - name: 'testing github'
-        run: pwd
-      - name: 'testing printing'
-        run: echo Ali  
+    steps:   
+      - uses: actions\checkout@v3 
+
+      - name: "docker hub login"
+        run: docker login --username alihaamed17 --password dckr_pat_Xh1D6SG3LuhMkfX3Tnzg2nYzd5M 
+    
 
