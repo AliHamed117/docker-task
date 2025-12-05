@@ -16,9 +16,13 @@ jobs:
 
 
     steps:   
-      - uses: actions\checkout@v3 
+      - uses: actions\checkout@v4 
 
       - name: "docker hub login"
         run: docker login --username alihaamed17 --password ${{ secrets.DOCKER_PAT }}
+      - name: Build and push image
+        run: |
+          docker build -t alihaamed17/docker-task:latest .
+          docker push alihaamed17/docker-task:latest  
     
 
